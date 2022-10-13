@@ -1,0 +1,7 @@
+{
+  "name": "tap-auth-micro-fe-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
