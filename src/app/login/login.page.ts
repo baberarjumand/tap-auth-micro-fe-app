@@ -8,18 +8,15 @@ import { AuthService } from '../shared/services/auth.service';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  constructor(private authService: AuthService) {}
 
-  constructor(private authService: AuthService) { }
+  ngOnInit() {}
 
-  ngOnInit() {
-  }
-
-  sampleLogIn() {
-    this.authService.sampleLogIn();
-  }
+  // sampleLogIn() {
+  //   this.authService.sampleLogIn();
+  // }
 
   loginWithWallet(walletType: string) {
-    window.location.href = environment.REACT_APP_BASE_URL + '/' + walletType;
+    this.authService.loginWithWallet(walletType);
   }
-
 }

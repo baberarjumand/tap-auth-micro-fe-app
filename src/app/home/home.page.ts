@@ -8,7 +8,11 @@ import { AuthService } from '../shared/services/auth.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  constructor(private authService: AuthService) {}
+  userId: string;
+
+  constructor(private authService: AuthService) {
+    this.userId = this.authService.getToken();
+  }
 
   sampleLogOut() {
     this.authService.sampleLogOut();
