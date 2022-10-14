@@ -37,10 +37,10 @@ export class AuthService {
   // in a real app, logic to verify the validity of a session token in this function
   verifySessionToken(sessionToken: string) {
     if (sessionToken.length > 0) {
-      console.log('Token Verified!');
+      // console.log('Token Verified!');
       return true;
     } else {
-      console.log('Token Verification Failed!');
+      // console.log('Token Verification Failed!');
       return false;
     }
   }
