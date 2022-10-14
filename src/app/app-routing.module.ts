@@ -15,6 +15,13 @@ const routes: Routes = [
       import('./login/login.module').then((m) => m.LoginPageModule),
   },
   {
+    path: 'auth/callback',
+    loadChildren: () =>
+      import('./auth-callback/auth-callback.module').then(
+        (m) => m.AuthCallbackPageModule
+      ),
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
